@@ -1,0 +1,7 @@
+{
+  "name": "TableroTurnos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
