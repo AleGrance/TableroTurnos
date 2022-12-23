@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Turnos registrados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>	
+    <thead>
+    
+      <tr>
+        <th>ID</th>
+        <th>FECHA TURNO</th>
+        <th>NOMBRE</th>
+        <th>ESTADO</th>
+        <th>SANATORIO</th>
+        <th>CEL</th>
+        
+      </tr>
+    
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let t of turnos">
+        <td>{{t.task_id}}</td>
+        <td>{{t.task_details | date :  "dd-MM-y"}}</td>
+        <td>{{t.task_name}}</td>
+        <td><p class="status status-paid">{{t.task_status}}</p></td>
+        <td>Migone</td>
+        <td>0981555444</td>
+        
+      </tr>
+    </tbody>
+  
+  </table>
+
+</ion-content>

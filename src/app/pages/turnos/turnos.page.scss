@@ -1,0 +1,94 @@
+* {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family:Mukta, sans-serif;
+	height:100vh;
+	display:grid;
+	justify-content:center;
+	align-items:center;
+	font-size:0.9rem;
+}
+
+table {
+	margin: 10px;
+	border-collapse:collapse;
+	box-shadow: 0 5px 10px rgba(0,0,0,.20);
+	font-family: popins, sans-serif;
+	min-width:50%;
+	font-size:0.9em;
+	text-align:left;
+	overflow:hidden;
+}
+
+thead {
+	box-shadow: 0 5px 10px rgba(0,0,0,.20);
+	color:rgba(0,0,0,.50);
+}
+
+th {
+	padding:1rem 2rem;
+	letter-spacing:0.1rem;
+	font-size:0.7rem;
+	font-weight:900;
+}
+
+td {
+	padding:1rem 2rem;
+}
+
+tr:nth-child(even) {
+	background-color:#f2f5fc;
+}
+
+.status {
+	padding:0.2rem 1rem;
+	border-radius:5px;
+	text-align:center;
+	font-weight:bold;
+
+}
+
+a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#7a8fdd;
+}
+
+.status-paid {
+	background-color:#c3e2c6;
+	color:#5f8e65;
+}
+
+.status-unpaid {
+	background-color:#ffc6d0;
+	color:#f47d87;
+}
+
+.status-pending {
+	background-color:#fdebbd;
+	color:#b8a362;
+
+}
+
+
+// Style toast
+
+ion-toast.custom-toast {
+	--background: #F4F4FA;
+	--box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+	--color: #4b4a50;
+  }
+	  
+  ion-toast.custom-toast::part(message) {
+	font-style: italic;
+  }
+  
+  ion-toast.custom-toast::part(button) {
+	border-left: 1px solid #d2d2d2;
+	color: #030207;
+	font-size: 15px;
+  }
