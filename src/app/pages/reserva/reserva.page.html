@@ -11,14 +11,22 @@
   <ion-list>
     <ion-item>
       <ion-label position="stacked">Nombre:</ion-label>
-      <ion-input [clearInput]="true" placeholder="Escriba el nombre" id="nombre"></ion-input>
+      <ion-input
+        [clearInput]="true"
+        placeholder="Escriba el nombre"
+        id="nombre"
+      ></ion-input>
     </ion-item>
-  
+
     <ion-item>
       <ion-label position="stacked">Apellido:</ion-label>
-      <ion-input [clearOnEdit]="true" placeholder="Escriba el apellido" id="apellido"></ion-input>
+      <ion-input
+        [clearOnEdit]="true"
+        placeholder="Escriba el apellido"
+        id="apellido"
+      ></ion-input>
     </ion-item>
-  
+
     <ion-item>
       <ion-label position="stacked">Email:</ion-label>
       <ion-input type="text" placeholder="Escriba el email"></ion-input>
@@ -28,16 +36,30 @@
       <ion-label position="floating">Tel/Cel:</ion-label>
       <ion-input type="number" maxlength="20"></ion-input>
     </ion-item>
-    
+
     <ion-item id="custom-item" counter="true">
-      <ion-label position="stacked">Fechas disponibles:</ion-label>
+      <ion-label position="stacked" style="margin-bottom: 10px;">Fecha:</ion-label>
       <!-- <ion-input type="date" id="fecha"></ion-input> -->
-      <ion-datetime
+      <!-- <ion-datetime
         id="fecha"
         minuteValues="0,15,30,45"
         hourValues="8,11,18"
         dayValues="5,10,15,20,25,30"
-        ></ion-datetime>
+        ></ion-datetime> -->
+
+      <ion-datetime-button datetime="fecha" style="margin-bottom: 10px;"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="fecha"
+            minuteValues="0,15,30,45"
+            hourValues="8,11,18"
+            dayValues="5,10,15,20,25,30"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
     </ion-item>
 
     <ion-button (click)="enviar()">Enviar</ion-button>
