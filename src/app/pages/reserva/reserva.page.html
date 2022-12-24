@@ -30,8 +30,14 @@
     </ion-item>
     
     <ion-item id="custom-item" counter="true">
-      <ion-label position="stacked">Fecha:</ion-label>
-      <ion-input type="date" id="fecha"></ion-input>
+      <ion-label position="stacked">Fechas disponibles:</ion-label>
+      <!-- <ion-input type="date" id="fecha"></ion-input> -->
+      <ion-datetime
+        id="fecha"
+        minuteValues="0,15,30,45"
+        hourValues="8,11,18"
+        dayValues="5,10,15,20,25,30"
+        ></ion-datetime>
     </ion-item>
 
     <ion-button (click)="enviar()">Enviar</ion-button>
