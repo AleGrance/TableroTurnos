@@ -18,7 +18,7 @@ export class TurnosPage implements OnInit {
   ngOnInit() {
     const position = 'top';
     const message = 'Aplicación iniciada';
-    this.presentToast(position, message);
+    //this.presentToast(position, message);
     //this.toastr.success('App iniciada');
     this.traer();
     setInterval((): void => {
@@ -45,26 +45,9 @@ export class TurnosPage implements OnInit {
       .pipe(
         map((data) => {
           this.turnos = data;
-          console.log(this.turnos);
+          //console.log(this.turnos);
         })
       )
       .subscribe();
-  }
-
-  enviar() {
-    let newCliente: any;
-
-    this.api.post('tasks', newCliente).subscribe(
-      (result) => {
-        if (typeof result === 'object') {
-          //this.toastr.success('Turno registrado');
-        } else {
-          //this.toastr.warning(result);
-        }
-      },
-      (error) => {
-        console.log('Si hay error en el post: ', error);
-      }
-    );
   }
 }

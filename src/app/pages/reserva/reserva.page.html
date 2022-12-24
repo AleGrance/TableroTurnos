@@ -8,5 +8,32 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nombre:</ion-label>
+      <ion-input [clearInput]="true" placeholder="Escriba el nombre" id="nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Apellido:</ion-label>
+      <ion-input [clearOnEdit]="true" placeholder="Escriba el apellido" id="apellido"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Email:</ion-label>
+      <ion-input type="text" placeholder="Escriba el email"></ion-input>
+    </ion-item>
 
+    <ion-item counter="true">
+      <ion-label position="floating">Tel/Cel:</ion-label>
+      <ion-input type="number" maxlength="20"></ion-input>
+    </ion-item>
+    
+    <ion-item id="custom-item" counter="true">
+      <ion-label position="stacked">Fecha:</ion-label>
+      <ion-input type="date" id="fecha"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="enviar()">Enviar</ion-button>
+  </ion-list>
 </ion-content>
