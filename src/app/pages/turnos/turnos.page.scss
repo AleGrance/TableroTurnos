@@ -19,9 +19,12 @@ table {
 	box-shadow: 0 5px 10px rgba(0,0,0,.20);
 	font-family: popins, sans-serif;
 	min-width:50%;
+	max-height: 600px;
 	font-size:0.9em;
 	text-align:left;
 	overflow:hidden;
+	background-color: #f2f5fc;
+	color: #030207;
 }
 
 thead {
@@ -41,7 +44,7 @@ td {
 }
 
 tr:nth-child(even) {
-	background-color:#f2f5fc;
+	background-color:#d8d8d8;
 }
 
 .status {
