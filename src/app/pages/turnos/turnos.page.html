@@ -26,11 +26,11 @@
     <tbody>
       <tr *ngFor="let t of turnos">
         <td>{{t.task_id}}</td>
-        <td>{{t.task_details | date :  "dd-MM-y"}}</td>
+        <td>{{t.fecha_turno | date :  "dd-MM-y"}} {{t.hora_turno}}</td>
         <td>{{t.task_name}}</td>
         <td><p class="status status-paid">{{t.task_status}}</p></td>
-        <td>Migone</td>
-        <td>0981555444</td>
+        <td>{{t.sanatorio}}</td>
+        <td>{{t.nro_cel}}</td>
         
       </tr>
     </tbody>
