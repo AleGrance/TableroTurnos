@@ -32,6 +32,9 @@ export class ReservaPage implements OnInit {
     const nombre = ((<HTMLInputElement>document.getElementById("nombre")).value);
     const apellido = ((<HTMLInputElement>document.getElementById("apellido")).value);
     const fecha = ((<HTMLInputElement>document.getElementById("fecha")).value);
+    const hora = ((<HTMLInputElement>document.getElementById("hora")).value);
+    const nro_cel = ((<HTMLInputElement>document.getElementById("nro_cel")).value);
+    const sanatorio = ((<HTMLInputElement>document.getElementById("sanatorio")).value);
 
     if (nombre === "" || fecha === "" || apellido === "") {
       let message = "Complete los campos!";
@@ -42,8 +45,12 @@ export class ReservaPage implements OnInit {
 
     objTurno = {
       task_name: nombre + ' ' + apellido,
-      task_details: fecha,
+      task_details: 'Registrado',
       task_status: 'Confirmado',
+      fecha_turno: fecha,
+      hora_turno: hora,
+      nro_cel: nro_cel,
+      sanatorio: sanatorio,
       UserUserId: 1
     }
 
