@@ -9,6 +9,6 @@ export class AppComponent {
     { title: 'Turnos', url: '/turnos', icon: 'list' },
     { title: 'Reserva', url: '/reserva', icon: 'pencil' }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['Confirmado', 'Pendiente', 'Cancelado', 'Modificado', 'Otro'];
   constructor() {}
 }
