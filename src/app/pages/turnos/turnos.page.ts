@@ -21,9 +21,9 @@ export class TurnosPage implements OnInit {
     //this.presentToast(position, message);
     //this.toastr.success('App iniciada');
     this.traer();
-    setInterval((): void => {
-      this.traer();
-    }, 2000);
+    // setInterval((): void => {
+    //   this.traer();
+    // }, 2000);
 
   }
 
